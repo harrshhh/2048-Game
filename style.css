@@ -1,0 +1,102 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size:7vmin;
+}
+.header{
+    margin-right: 10%;
+    color: rgb(2, 2, 24);
+    padding-right: 0%;
+    border: 2px solid red;
+    width: 56vh;
+    height: 60vh;
+    background-color:rgb(162, 150, 150);
+    border-radius: 20px;
+}
+#info{
+    font-size: 5vmin;
+    color: rgb(48, 31, 115);
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border: 2px solid rgb(30, 40, 45);
+    border-bottom-left-radius: 1rem;
+    background-color: cadetblue;
+    border-top-right-radius: 1rem;
+    margin-left: 10rem;
+    cursor: pointer;
+    font-size: 20px;
+}
+#title{
+    font-size: 7vmin;
+    font-style: italic;
+    color: rgb(20, 100, 73);
+    font-family: 'Courier New', Courier, monospace;
+    /* position:sticky; */
+    display: flex;
+    justify-content: center;
+    margin: 2vmin;
+
+}
+.play{
+    font-family:  monospace;
+    font-size: 13.3px;
+    font-weight:bold;
+
+    color: rgb(12, 25, 142);
+}
+#game-board{
+  
+    display: grid;
+    grid-template-rows: repeat(var(--grid-size),var(--cell-size));
+    grid-template-columns: repeat(var(--grid-size),var(--cell-size));
+    background-color: rgb(35, 108, 171);
+    gap: var(--cell-gap);
+    border: 2px solid rebeccapurple;
+    padding: 2vmin;
+    border-radius: 10px;
+    position:relative;
+}
+
+.cell{
+    background-color: rgb(188, 171, 148);
+    border-radius: 2vmin;
+}
+
+.tile{
+    
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    /* background-color: brown; */
+    border-radius: 2vmin;
+    top:calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+    left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+    font-weight:bolder;
+    font-size: larger;
+    background-color: hsl(200, 50%, var(--background-lightness));
+    color: hsl(200, 20%, var(--text-lightness));
+    animation: show 200ms ease-in-out;
+    transition: 100ms ease-in-out;
+}
+
+@keyframes show {
+    0%{
+        opacity: 0.5;
+        transform: scale(0);
+    }
+}

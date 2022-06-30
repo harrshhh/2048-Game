@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048-Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="module"></script>
+</head>
+<body>
+  <div class="header">
+    <h1 id="title">2048</h1>
+    <div id="info">Score:
+      <span id="score"></span>
+     </div> 
+     <button class="btn" id="share">Share</button>
+     <button class="btn" id="reset" onclick="document.location.reload()">Reset</button>
+    
+      <p class="play">How To Play : Combine tiles of the same number in an attempt to create a tile with the value 2048.</p>
+
+  <p class="play"> Pressing the arrow keys or swiping across the game board will move all tiles in the direction of the key pressed/swipe. After all the tiles are done moving a new tile with the value of 2 or 4 will be created in a random empty cell.</p>
+  
+  <p class="play">Two tiles with the same number will merge when they collide to create a single tile with double the value.</p>
+  
+ <p class="play"> The game is over when there are no valid ways for you to move the tiles.</p>
+
+   </div>
+  
+    <div id="game-board"> 
+
+    </div>
+
+<audio id="audio1" controls style="display:none">
+    <source src="sounds/flash-1.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+  </audio>
+  <audio id="audio2" controls style="display:none">
+    <source src="sounds/flash-2.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+  </audio>
+  <audio id="audio3" controls style="display:none">
+    <source src="sounds/flash-3.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+  </audio>
+  <audio id="audio4" controls style="display:none">
+    <source src="sounds/wipe.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+  </audio>
+  
+</body>
+</html>
